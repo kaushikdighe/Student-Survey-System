@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SWE 642 Assignment 2</title>
+
+	<style type="text/css">
+
+			.top
+			{
+    			width: 100%;
+	    		padding: 13px;
+	    		padding-top: 23px;  
+	    		border: 0;
+	    		margin: 0;
+			    background-color: #78AB46;
+			    border-bottom: 1px #006633;
+			    text-align: center;
+			}
+			.heading-font
+			{
+				color: #000080;
+				text-shadow: -1px 1px #FFFFFF;
+			}
+			.body-margin
+			{
+				margin: 0;
+				background-color: #eeeeee;
+			}
+			.main
+			{
+    			width:776px;
+			}
+			.submit-button
+			{
+			    padding:5px 15px; 
+			    background:#ccc; 
+			    border:0 none;
+			    /*-webkit-border-radius: 5px;*/
+			    border-radius: 5px; 
+			}
+			.low
+			{
+				position: absolute;
+				right: 10px;
+				bottom: -600px;
+			}
+	</style>
+</head>
+<body class="body-margin">
+	<div class="top">
+			<h1 class="heading-font">Department of Computer Science</h1>
+			<h4 class="heading-font">Volgenau School of Engineering</h4>
+			<h4 class="heading-font">Dighe</h4>
+	</div>
+	<h3>Department Survey Form</h3><hr>
+	<div class="main">
+		<form method="post" action="" autocomplete="on">
+			<table cellspacing="10">
+			<tr>
+				<td><label for="fid">First Name</label><font color="red">*</font></td></td>
+				<td><input type="text" name="fid" id="fid" autofocus="autofocus" autocomplete="on"  required/></td>
+			</tr>
+			<tr>
+				<td><label for="lid">Last Name</label><font color="red">*</font></td></td>
+				<td><input type="text" name="lid" id="lid" autocomplete="on" required/></td>
+			</tr>
+			<tr>
+				<td><label for="addr1">Street Address Line 1</label><font color="red">*</font></td></td>
+				<td><input type="text" name="addr1" id="addr1" autocomplete="on" required/></td>
+			</tr>
+			<tr>
+				<td><label for="addr2">Street Address Line 2 (optional)</label></td>
+				<td><input type="text" name="addr2" id="addr2" autocomplete="on"/></td>
+			</tr>
+			<tr>
+				<td><label for="city">City</label><font color="red">*</font></td></td>
+				<td><input type="text" name="city" id="city" required/></td>
+			</tr>
+			<tr>
+				<td><label for="state">State</label><font color="red">*</font></td></td>
+				<td><input type="text" name="state" id="state" required/></td>
+			</tr>
+			<tr>
+				<td><label for="zip">Zip Code</label><font color="red">*</font></td></td>
+				<td><input type="number" name="zip" id="zip" required/></td>
+			</tr>
+			<tr>
+				<td><label for="telephone">Telephone Number</label><font color="red">*</font></td></td>
+				<td><input type="tel"  pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" 
+									name="telephone" maxlength="10" id="telephone" 
+											placeholder="(###) ###-####" autocomplete="on" /></td>
+			</tr>
+			<tr>
+				<td><label for="emailid">Email Address</label><font color="red">*</font></td></td>
+				<td><input type="email" name="emailid" id="emailid" 
+								placeholder="xyz@domain.com" autocomplete="on" required/></td>
+			</tr>
+			<tr>
+				<td><label for="highschoolmonth">High School Graduation</label><font color="red">*</font></td></td>
+				<td><input list="months" placeholder="Select a Month">
+				<datalist id="months">
+					<option value="January"></option>
+					<option value="February"></option>
+					<option value="March"></option>
+					<option value="April"></option>
+					<option value="May"></option>
+					<option value="June"></option>
+					<option value="July"></option>
+					<option value="August"></option>
+					<option value="September"></option>
+					<option value="October"></option>
+					<option value="November"></option>
+					<option value="December"></option>
+				</datalist>
+				<input type="text" name="year" id="year" placeholder="yyyy" /></td>
+			</tr>
+			<tr>
+				<td><label for="url">URL</label></td>
+				<td><input type="url" name="url" id="url" placeholder="www.domainname.com" /></td>
+			</tr>
+			<tr>
+				<td><label for="dateforsurvey">Date For Survey</label></td>
+				<td><input type="date" name="dateforsurvey" id="dateforsurvey" placeholder="mm/dd/yyyy" required/></td>
+			</tr>
+			<tr>
+				<td><label><b>Thing you liked on campus:</b></label></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="thingsyouliked" value="Students" />Students</td>
+				<td><input type="checkbox" name="thingsyouliked" value="locations" />Location</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="thingsyouliked" value="campus"/>Campus</td>
+				<td><input type="checkbox" name="thingsyouliked" value="atmosphere"/>Atmosphere</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="thingsyouliked" value="dormrooms"/>Dorm Rooms</td>
+				<td><input type="checkbox" name="thingsyouliked" value="sports"/>Sports</td>
+			</tr>
+			<tr>
+				<td><label><b>How you became interested in GMU:</b></label></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="knowuni" value="friends"/>Friends</td>
+				<td><input type="radio" name="knowuni" value="television"/>Television</td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="knowuni" value="internet"/>Internet</td>
+				<td><input type="radio" name="knowuni" value="other"/>Others</td>
+			</tr>
+			<tr>
+				<td><label>Likelihood of Recommending School</label></td>
+				<td>
+					<select id="myselect">
+						<option value="1" id="myselect1"> Very Likely </option>
+						<option value="2" id="myselect1"> Likely </option>
+						<option value="3" id="myselect1"> UnLikely </option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="additionalcomments">Additional Comments</label></td>
+				<td><textarea rows="5" cols="50" maxlength="1000" placeholder="additional comments"></textarea></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="submit" value="Submit" id="submit" class="submit-button"></td>
+			</tr>
+			</table>
+		</form>
+	</div>
+		<!-- <div class="low">
+			<a href="https://www2.gmu.edu/">
+				<img src="logo1.gif" alt="George Mason University">
+			</a>
+		</div> -->
+</body>
+</html>

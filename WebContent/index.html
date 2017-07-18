@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" src="jquery/jquery.js"></script>
+<script type="text/javascript" src="jquery/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="jquery/jquery-ui.structure.css">
+<link rel="stylesheet" type="text/css" href="jquery/jquery-ui.theme.css">
+
+<!-- <script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui.structure.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui.theme.css"> -->
+
+	<meta charset="ISO-8859-1">
+	<title>SWE 642</title>	
+	<style type="text/css">
+			.rotateimage 
+			{
+		    -webkit-transform: rotate(270deg);
+		    -moz-transform: rotate(270deg);
+		    -o-transform: rotate(270deg);
+		    -ms-transform: rotate(270deg);
+		    transform: rotate(270deg);
+			}
+			.body-margin
+			{
+				background-color: #eeeeee;
+			}
+			.font-color
+			{
+				color: #78AB46;
+			}
+			.link
+			{
+				color: blue;
+			}
+			.low
+			{
+				position: absolute;
+				right: 10px;
+				bottom: -600px;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$("div#main-tabbed-panel-div").tabs({
+				  /*collapsible: true,
+				  active: false*/
+			  });
+				$("#tooltip-1").tooltip({
+					track: true
+				});
+			});
+		</script>
+</head>
+<body class="body-margin">
+	<h1 class="font-color" style="text-align:center"> Welcome To SWE642 </h1>
+	
+	<div id="main-tabbed-panel-div">
+		<ul> 
+			<li><a href="#hw1">Assignment 1</a></li> 
+			<li><a href="#hw2">Assignment 2</a></li> 
+			<li><a href="#hw3">Assignment 3(Part 1)</a></li>
+		</ul>
+		<div id="hw1" >
+			<iframe id="myframe1" src="index_assignment1.html" width="1200px" height="800px"></iframe>
+		</div>
+		<div id="hw2" >
+			<h5>Internal Link to the CS Department Information Page and Survey Page</h5>
+			<iframe id="myframe2" src="index_assignment2.html" width="1200px" height="800px"></iframe>
+		</div>
+		<div id="hw3" >
+			<iframe id="myframe3" src="csdeptsurveypage_assignment3part1.html" 
+					width="1200px" height="800px"></iframe>
+		</div>
+	</div>
+	<div class="low">
+			<a id="tooltip-1" title="Please click here to visit www.gmu.edu" href="https://www2.gmu.edu/">
+				<img src="logo1.gif" alt="George Mason University">
+			</a>
+	</div>
+</body>
+</html>
